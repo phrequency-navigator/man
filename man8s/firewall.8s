@@ -1,0 +1,41 @@
+.TH firewalls
+
+.SH Firewalld Usage
+
+Firewalld is an integral part of Enterprise Linux, takng the place of other
+firewalls. It will be useful to know some of the following things.
+.PP
+I will expand this later, with more information about firewalld
+.PP
+TODO:
+.PP
+
+.SS Working with Zunes
+One thing to understand about firewalld is that it is a zone-based firewall.
+This means that an interface is assigned to a zone or zones, and that assignment
+and the zone rules that apply. This introduces a simple way to route traffic
+through the firewall.
+.PP
+.SB Add an interface to a zone:
+.PP
+	firewall-cmd --permanent --zone=home --add-interface=eno1
+.PP
+.SB Add a service or port to zone
+.PP
+	firewall-cmd --permanent --zone=home --add-service=ssh
+.PP
+	firewall-cmd --permanent --zone=home --add-port=22/tcp
+.PP
+.SB List rules in your zones:
+.PP
+	firewall-cmd --list-all-zones
+.PP
+	firewall-cmd --list-default-zone
+.SS Permanence and Reloading
+Changes in firewalld take place immediately, but are not permanent by default.
+In order to make your changes permanent, you need to either append the --permanent
+flag, or use another flag like so.
+.PP
+	firewall-cmd --runtime-to-permanent
+.PP
+	firewall-cmd --permenant --add-port=22/tcp --zone=home

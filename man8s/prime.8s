@@ -1,0 +1,20 @@
+.TH prime.8s
+.SH Info:
+This is a site intended to be used as reference material for myself and 
+whomever else decides they like my notes. These will be accompanied by
+a series of git repos to distribute the code. I will link to them once 
+the examples have been finished and fact-checked. The main portion of 
+this repository is going to be the man pages.
+
+.SS To Do:
+* firewalld
+.P
+* ansible
+.P
+* synergy
+.P
+* neovim
+.P
+* sync
+
+.SS Completed:
