@@ -1,3 +1,33 @@
 .TH git
 .SH The code repository management tool
 
+Git is useful for version control and management of large or small
+repositories of code. Here are some basics.
+.PP
+
+.SB Add a file to the working tree
+.PP
+	git add <foo>
+.PP
+.SB Commit staged files with a message
+.PP
+	git commit -m "MESSAGE"
+.PP
+.SB Push changes to a branch
+.PP
+	git push origin main
+.PP
+.SB Switch branches
+.PP
+	git checkout dev
+.PP
+.SB Delete something
+.PP
+WARNING: This will delete local changes too!
+.PP
+	git rm foo.txt
+.PP
+.SB Revert to version in source control
+.PP
+	git restore foo.txt
+.PP
