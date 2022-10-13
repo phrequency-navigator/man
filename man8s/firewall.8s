@@ -31,6 +31,15 @@ through the firewall.
 	firewall-cmd --list-all-zones
 .PP
 	firewall-cmd --list-default-zone
+.PP
+.SB Default Zones
+.PP
+You can change the default zone that any connection will use. This is done with the
+--set-default-zone flag like so:
+.PP
+	firewall-cmd --permanent --set-default-zone home
+.PP
+
 .SS Permanence and Reloading
 Changes in firewalld take place immediately, but are not permanent by default.
 In order to make your changes permanent, you need to either append the --permanent
@@ -38,4 +47,6 @@ flag, or use another flag like so.
 .PP
 	firewall-cmd --runtime-to-permanent
 .PP
-	firewall-cmd --permenant --add-port=22/tcp --zone=home
+	firewall-cmd --permanent --add-port=22/tcp --zone=home
+
+
